@@ -46,7 +46,7 @@ ____
 * Billed per vCPUs and Memory 
 
 ## Instance Groups
-![](instanceGroups.png)
+![](img/instanceGroups.png)
 * Regional means within a region
 * Zonal means within a zone
 
@@ -98,10 +98,10 @@ and so on...
 ## GKE
 ![](img/gke.png)
 ![](img/autopilot.png)
-* GKE Commands start with: `gcloud container\<command>`
+* GKE Commands start with: `gcloud container <command>`
 
 ### GKE commands
-* `gcloud contaner cluster get-credentials my-cluster` to connect to K8s cluster
+* `gcloud container cluster get-credentials my-cluster` to connect to K8s cluster
 * `kubectl create deployment <deployment_name>` to create deployment  
 * `kubectl expose deployment <deployment_name> --type=LoadBalancer --port=8080` 
 * `kubectl scale deployment <deployment_name> --replicas=2` to scale the pods in K8s deployment 
@@ -111,3 +111,41 @@ and so on...
 * `gcloud container clusters update <cluster_name> --enable-autoscaling --min-nodes=1 --max-nodes=10`
 * `kubectl delete deployment`
 * `gcloud container clusters delete` deletes the GKE cluster
+
+## Cloud Functions (~= AWS Lambda)
+![](img/cloud-functions.png)
+* MAX duration has been updated to 60 minutes (in v2)
+
+## Cloud Run
+![](img/cloud-run.png)
+
+# Storage in GCP
+
+## Block Storage
+* Can connect multiple block devices to one single server but not vice-versa
+![](img/blockStorage.png)
+
+## File Storage 
+![](img/file-storage.png)
+
+### Types
+![](img/st-types.png)
+* Local SSDs = High Performance
+* Persistent Storage = High Globality
+
+## Cloud Storage An object Storage
+* Name of the bucket must be globally unique 
+![](img/cloud-storage.png)
+
+## Storage Classes
+![](img/storage-classes.png)
+* You can modify the storage class at the object level as well
+
+## Object Lifecycle management
+* Similar to Intelligent Tiering in AWS
+
+![](img/lifecyle-management.png) 
+
+## Data Transfer to Cloud
+![](img/data-transfer.png)
+![](img/transfer-appliance.png)
