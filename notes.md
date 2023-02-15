@@ -86,3 +86,28 @@ and so on...
 
 ## GCP Services
 ![](img/gcp-services.png)
+
+# GCP Compute Services
+
+## App Engine
+![](img/app-engine.png)
+![](img/app-engine-env.png)
+
+>  Note: Before using any service you haven't used before, you actually enable the API of the application first
+
+## GKE
+![](img/gke.png)
+![](img/autopilot.png)
+* GKE Commands start with: `gcloud container\<command>`
+
+### GKE commands
+* `gcloud contaner cluster get-credentials my-cluster` to connect to K8s cluster
+* `kubectl create deployment <deployment_name>` to create deployment  
+* `kubectl expose deployment <deployment_name> --type=LoadBalancer --port=8080` 
+* `kubectl scale deployment <deployment_name> --replicas=2` to scale the pods in K8s deployment 
+* `gcloud container clusters resize my-cluster --node-pool default-pool --num-nodes=2` for scaling nodes in GKE cluster
+* `kubectl autoscale deployment <deplyment_name> --max=10 --cpu-percent=70` auto scales pods based on CPU percentage
+* `kubectl get hpa` | HPA (Horizontal Pod AutoScaling) 
+* `gcloud container clusters update <cluster_name> --enable-autoscaling --min-nodes=1 --max-nodes=10`
+* `kubectl delete deployment`
+* `gcloud container clusters delete` deletes the GKE cluster
