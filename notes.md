@@ -149,3 +149,37 @@ and so on...
 ## Data Transfer to Cloud
 ![](img/data-transfer.png)
 ![](img/transfer-appliance.png)
+
+# Databases
+## Relational Databases
+### OLTP
+* Strong Transactional Capabilities
+![](img/managed-databases.png)
+
+* `gcloud sql connect` is used to connect to Cloud SQL database
+### OLAP
+![](img/olap.png)
+* **BigQuery** is GCP managed service for OLAP that handles petabytes of data
+
+## NoSQL Databases
+![](img/nosql-db.png)
+
+## In-Memory Databases (Cache)
+![](img/in-memory-db.png)
+
+## DB Scenarios
+![](img/db-scenarios.png)
+
+# IAM
+![](img/iam.png)
+![](img/iam-terminology.png)
+> **AWS ROLES ARE COMPLETELY DIFFERENT FROM ROLES IN GCP**
+
+## Roles
+![](img/iam-roles.png)
+
+## Service Accounts
+* Similar to EC2 instance Roles
+![](img/service-accounts.png)
+* When creating a service account, you need to assign it to a user so that when he creates the VM, he can make use of the Service account
+* Similarly, you can also have an admin privileges for Service account managing permissions and stuff 
