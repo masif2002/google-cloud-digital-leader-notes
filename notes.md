@@ -182,4 +182,37 @@ and so on...
 * Similar to EC2 instance Roles
 ![](img/service-accounts.png)
 * When creating a service account, you need to assign it to a user so that when he creates the VM, he can make use of the Service account
-* Similarly, you can also have an admin privileges for Service account managing permissions and stuff 
+* Similarly, you can also have an admin privileges for Service account managing permissions and stuff
+
+# Resource organization in GCP
+##  Hierarichy structure
+![](img/hierarchy.png)
+
+## Billing Accounts
+![](img/billing-accounts.png)
+![](img/budget.png)
+
+## IAM Best Practices
+![](img/iam-best-practices.png)
+
+## On-premises to GCP connection
+### Cloud VPN
+![](img/cloud-vpn.png)
+### Cloud Interconnect
+![](img/cloud-interconnect.png)
+
+### Direct Peering
+![](img/direct-peering.png)
+
+## User Identity Management in GCP
+![](img/user-indentity-management.png)
+![](img/some-federation.png)
+
+## Organization's Policy Service
+* Organization's Policy Service has more priority than IAM
+![](img/policy-service.png)
+![](img/iam-vs-policy-service.png)
+
+## User Identity Platform
+* For the Users of your Application
+![](img/uiam.png)
