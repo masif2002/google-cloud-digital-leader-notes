@@ -93,8 +93,8 @@ and so on...
 ![](img/app-engine.png)
 ![](img/app-engine-env.png)
 
->  Note: Before using any service you haven't used before, you actually enable the API of the application first
-
+>  Note: Before using any service you haven't used before, you actually lication first
+enable the API of the app
 ## GKE
 ![](img/gke.png)
 ![](img/autopilot.png)
@@ -216,3 +216,69 @@ and so on...
 ## User Identity Platform
 * For the Users of your Application
 ![](img/uiam.png)
+
+# VMs (..contd)
+## Bare Metal
+![](img/bare-metal.png)
+
+## VmWare Engin
+![](img/vmware-engine.png)
+
+## Migrate for Compute Engine
+* For migrating (EC2)instances from other clouds
+![](img/migrate-ce.png)
+
+## Migrate for Anthos
+![](img/anthos.png)
+
+# DevOps 
+## CI/CD
+### code analysis
+![](img/code-analysis.png)
+
+### tools
+![](img/ci-cd-tools.png)
+
+### walkthrough
+![](img/production-walkthrough.png)
+
+## IaC (Infrastructure as Code)
+![](img/iac.png)
+* Google Cloud Deployment Manager is a GCP service for IaS
+
+## GCP Service for Operations
+![](img/gcp-ops-services.png)
+
+## Site Reliability Engineering (SRE)
+![](img/SRE.png)
+
+### Key Metrics
+![](img/sre-metrics.png)
+* Error budget is like an internal thing where if the team fails to meet the SLA, there error budget goes down. If the team has exhausted their error budget then they have to slow down in production releases
+
+### Best Practices
+![](img/best-practices.png)
+![](img/bp-2.png)
+![](img/bp-3.png)
+
+# Decoupling w/ Pub-Sub
+![](img/sync-comm.png)
+* If the application has high load, it might send a lot of requests that the loggin service might not be able to handle
+* So, if we have a pub-sub (a message queue) in between, the logging service can pick up the requests when it is ready
+![](img/pub-sub.png)
+
+## Pub Sub
+> ***Pub**lisher/**Sub**scriber*
+* Auto scale to process billions of messages per day
+* Low Cost (Pay for use)
+
+![](img/working-pub-sub.png)
+* If multiple clients are attached to a same subscription, the messages are split between the clients
+* If clients have seperate subscriptions all the messages are sent to every client
+
+### Workflow
+![](img/pubsub-workflow.png)
+
+## DataFlow
+* A GCP service to do some edubudi velai such as importing data from one service to another, comporession of files, decompression of files and so on ..
+![](img/dataflow.png)
