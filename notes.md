@@ -160,7 +160,8 @@ enable the API of the app
 ### OLAP
 ![](img/olap.png)
 * **BigQuery** is GCP managed service for OLAP that handles petabytes of data
-
+* Apart from BigQuery storing structured data (in rows N columns), it can also store data in unstructured format
+![](img/bigquery.png)
 ## NoSQL Databases
 ![](img/nosql-db.png)
 
@@ -229,6 +230,8 @@ enable the API of the app
 ![](img/migrate-ce.png)
 
 ## Migrate for Anthos
+* Anthos is used as a container orchestration tool when your cluster is running in multi-cloud and/or on-premises environments
+
 ![](img/anthos.png)
 
 # DevOps 
@@ -282,3 +285,74 @@ enable the API of the app
 ## DataFlow
 * A GCP service to do some edubudi velai such as importing data from one service to another, comporession of files, decompression of files and so on ..
 ![](img/dataflow.png)
+
+# Other Services
+## OverView
+```
+Dataproc - Manage Spark and Hadoop clusters (proc=processing)
+Dataprep - Clean and prepare data (ETL)
+Dataflow - Create data pipelines | (and can also perform ETL)
+DataStudio - Visualize data in BigQuery
+Datalab - Provides Jypter Notebooks (IDE) with Data Science libraries
+Looker - BI Tool
+
+BigQuery - Ad Hoc complex analysis
+BigTable - pre-defined time series data
+
+ioT Core - Manage ioT devices
+apiGee - Comprehensive API management
+C Endpoint - Basic API management; Complex to set up
+API Gateway - Simpler newer API management
+
+Speech-to-Text API 
+Text-to-Speech API
+Translation API - Translate texts into more than 100 languages
+Natural Language API - Identify insights from unstructured texts
+Cloud Vision API - Identifies objects from images and classifies them to PREDEFINED categories  
+Auto ML - Build custom ML models with minimum expertise
+Vertex AI - Make MLOps easier
+BigQueryML - Create models by queying BigQuery (OLAP) DB 
+*** Security Services in Security Section ***
+```
+> keep in mind Cloud Vision vs AutoML 
+
+![](img/dataproc.png)
+![](img/dataprep.png)
+![](img/datalake.png)
+![](img/api-management.png)
+* Cloud Endpoints allows versioning of API
+![](img/ml.png)
+> You can run queries using BigQuery and DataProc on data that is present in Cloud Storage (S3)
+
+## TPUs
+* Tensor Processing Unit. Can be used (in GCE, GKE...) for ML workloads
+
+## Firebase
+![](img/firebase.png)
+
+## Container Registry
+![](img/container-registry.png)
+![](img/artifact-registry.png)
+
+## Security
+![](img/security-1.png)
+* Data Loss Prevention is aka DAP
+![](img/security-2.png)
+
+### Zero Trust Security model
+* In traditional IT security model, the security was implemented only at the network level. Users putside the network were supposed to be authenticated.
+* But In ZTSM, every resource should have authentication at the resource-level as well. Even if an attacker gains access to the network, he needs to be authenticated for each resource as well.
+
+> Multi-Region in GCP always means that multiple regions in the same Continent (Asia, US, Europe)
+
+# Arcitectures in the cloud
+## Cloud Native
+* The goal of cloud native architectures is to increase software delivery velocity and increase service reliability
+
+![](img/cloud-native.png)
+
+## Serverless Services in GCP
+![](img/serverless.png)
+
+## Factors to consider while choosing a Region
+![](img/region.png)
