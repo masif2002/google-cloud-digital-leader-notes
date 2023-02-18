@@ -127,6 +127,7 @@ enable the API of the app
 
 ## File Storage 
 ![](img/file-storage.png)
+* Cloud Filestore allows to share files in the cloud
 
 ### Types
 ![](img/st-types.png)
@@ -292,6 +293,7 @@ enable the API of the app
 Dataproc - Manage Spark and Hadoop clusters (proc=processing)
 Dataprep - Clean and prepare data (ETL)
 Dataflow - Create data pipelines | (and can also perform ETL)
+DataFusion - Visually manage data piplelines (Like Flowchart mayB)
 DataStudio - Visualize data in BigQuery
 Datalab - Provides Jypter Notebooks (IDE) with Data Science libraries
 Looker - BI Tool
@@ -356,3 +358,39 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 
 ## Factors to consider while choosing a Region
 ![](img/region.png)
+
+# Google Cloud Adoption (Chumma Topic)
+## GCP Adoption Framework
+![](img/adoption.png)
+
+## Infrastructure Adoption
+![](img/infra.png)
+
+## Application Adoption
+![](img/app-adoption.png)
+
+## Business Platform Modernization
+![](img/bpm.png)
+
+# Cost Management in GCP
+> ## Already Known info mentioned below
+![](img/tco.png) 
+![](img/pricing.png)
+![](img/capex.png)
+
+> ## New info mentioned below
+![](img/pricing-factors.png)
+
+## Cost Management Tools
+![](img/cost-management.png)
+
+## Best Practices
+![](img/cost-management-best-practices.png)
+
+# Final Review
+![](img/compute-services.png)
+![](img/managed-services.png)
+![](img/storage-services.png)
+![](img/database-services.png)
+![](img/migration-services.png)
+![](img/other-services.png)
