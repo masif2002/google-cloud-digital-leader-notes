@@ -132,6 +132,7 @@ enable the API of the app
 ### Types
 ![](img/st-types.png)
 * Local SSDs = High Performance
+    * Local SSDs are attached to the VM and have very high throughput.  However, when the VM shuts down, the Local SSD is also shut down.  Since our workload here is fault tolerant, that is not an issue.
 * Persistent Storage = High Globality
 
 ## Cloud Storage An object Storage
@@ -166,6 +167,7 @@ enable the API of the app
 * With the **on-demand pricing model** in BigQuery, you are charged for the number of bytes processed by each query. 
 * BigQuery Monthly and Annual **reservations** can be used to provide guaranteed capacity for workloads with SLAs. This is also known as Flat Rate Pricing
 * BigQuery **Flex slots** are a good way to test how your workloads perform with flat-rate billing, before purchasing a longer-term commitment. They are also useful for handling cyclical or seasonal demand, or for high-load events such as tax season.
+    * BigQuery Flex Slots is best suited for for workloads that need to process a lot of data in a short time, and so would be less expensive to run using reserved slots for a short time.
 * The first 1 TB of query data processed per month is free in BigQuery
 ![](img/bigquery.png)
 ## NoSQL Databases
@@ -286,9 +288,7 @@ enable the API of the app
 * If multiple clients are attached to a same subscription, the messages are split between the clients
 * If clients have seperate subscriptions all the messages are sent to every client
 
-### Workflow
-![](img/pubsub-workflow.png)
-
+User Identit
 ## DataFlow
 * A GCP service to do some edubudi velai such as importing data from one service to another, compression of files, decompression of files and so on ..
 ![](img/dataflow.png)
@@ -348,6 +348,9 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 ![](img/security-1.png)
 * Data Loss Prevention is aka DAP
 ![](img/security-2.png)
+
+## Support
+![](img/customer-support.png)
 
 ### Zero Trust Security model
 * In traditional IT security model, the security was implemented only at the network level. Users outside the network were supposed to be authenticated.
@@ -429,3 +432,23 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 * **Database Migration Service** Available now for MySQL and PostgreSQL, with Oracle
 * **AlloyDB** is a fully managed PostgreSQL-compatible database service
 * VM instances that only have internal IP addresses (no external IP addresses) can use **Private Google Access**. They can reach the external IP addresses of Google APIs and services.
+* Google provides **unified billing** for the open source tools that it has partenered with like MongoDB, Confluent, DataStax ...
+* **Confidential Compute** is the option that allows you to encrypt data in use—while it’s being processed.
+* Leading software vendors provide **virtual desktop solutions** (VDI) on Google Cloud: Citrix, Itopia,
+* When you enable **committed use discount sharing**, all of your current active committed use discounts in all the projects come under the same Cloud Billing account
+* Notebooks is a managed service that offers an integrated and secure JupyterLab environment for data scientists 
+* Google Cloud Directory Sync integrates with most LDAP management systems and can synchronize identities like Active Directory
+* In Google's CDN service, your sites gets a single global IP (anycast IP)
+* Bare Metal machines give you the ability to install any software but Sole-tenant nodes are still virtualized
+* Cloud Trace is used for analyzing latency
+* Titan Security Keys provide the highest level of security more than MFA using Mobile app
+* VPC Network Peering allows internal IP address connectivity across two Virtual Private Cloud (VPC) networks regardless of whether they belong to the same project or the same organization.
+    * Shared VPC is only within an organization - it allows an organization to connect resources from multiple projects to a common Virtual Private Cloud (VPC) network, so that they can communicate with each other securely and efficiently using internal IPs from that network.
+* Bring your own IP (BYOIP) lets you provision and use your own public IPv4 addresses for Google Cloud resources
+* Cloud Identity Platform allows you to manage identity and credentials for your consumer facing applications. Wheread Cloud Identity is for the enterprise.  It provides an email id with the org domain name, but with no access to Google Workspace tools like Docs, Sheets, Slides, etc.
+* BigQuery also supports streaming data and its possible to do real time analytics on it.
+* You can associated a Google Billing Account with a GCP organization or GCP Projects. There is no concept of associating a billing account with a folder
+* Data Studio is a free tool and integrates well with BigQuery. Both creating and viewing reports are free.
+* Migrate for Compute Engine’s advanced replication migration technology copies instance data to Google Cloud in the background with no interruptions to the source workload that’s running.
+* Operations Suite provides integrated monitoring, logging, and trace managed services for applications and systems running on Google Cloud and beyond.
+* Lending DocAI is a pre-packaged AI solution that speeds "up the mortgage workflow processes to easily process loans and automate document data capture, while ensuring the accuracy and breadth of different documents (e.g., tax statements and asset documents)."
