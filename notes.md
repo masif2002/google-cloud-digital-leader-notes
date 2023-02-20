@@ -10,7 +10,7 @@
 # GCE (Google Compute Engine)
 ### Image
 * **Hardening an Image** means to create an image out of a GCE instance that adheres to the corporate standards of the organization
-* You need to stop an instance before creating an image out of it. However there is still an option to take an image while the instance is running but it isnot recommended
+* You need to stop an instance before creating an image out of it. However there is still an option to take an image while the instance is running but it is not recommended
 
 ### Instance Template
 * You cannot edit an instance template once you created it. You can only create a copy of it and modify the copy
@@ -150,6 +150,7 @@ enable the API of the app
 ## Data Transfer to Cloud
 ![](img/data-transfer.png)
 ![](img/transfer-appliance.png)
+* Google Recommends to use Transfer Appliance when transferring over 60 TB of data
 
 # Databases
 ## Relational Databases
@@ -162,6 +163,10 @@ enable the API of the app
 ![](img/olap.png)
 * **BigQuery** is GCP managed service for OLAP that handles petabytes of data
 * Apart from BigQuery storing structured data (in rows N columns), it can also store data in unstructured format
+* With the **on-demand pricing model** in BigQuery, you are charged for the number of bytes processed by each query. 
+* BigQuery Monthly and Annual **reservations** can be used to provide guaranteed capacity for workloads with SLAs. This is also known as Flat Rate Pricing
+* BigQuery **Flex slots** are a good way to test how your workloads perform with flat-rate billing, before purchasing a longer-term commitment. They are also useful for handling cyclical or seasonal demand, or for high-load events such as tax season.
+* The first 1 TB of query data processed per month is free in BigQuery
 ![](img/bigquery.png)
 ## NoSQL Databases
 ![](img/nosql-db.png)
@@ -216,7 +221,7 @@ enable the API of the app
 ![](img/iam-vs-policy-service.png)
 
 ## User Identity Platform
-* For the Users of your Application
+* For the end users of your Application
 ![](img/uiam.png)
 
 # VMs (..contd)
@@ -252,6 +257,7 @@ enable the API of the app
 
 ## GCP Service for Operations
 ![](img/gcp-ops-services.png)
+![](img/gcp-ops-scenarios.png)
 
 ## Site Reliability Engineering (SRE)
 ![](img/SRE.png)
@@ -267,8 +273,8 @@ enable the API of the app
 
 # Decoupling w/ Pub-Sub
 ![](img/sync-comm.png)
-* If the application has high load, it might send a lot of requests that the loggin service might not be able to handle
-* So, if we have a pub-sub (a message queue) in between, the logging service can pick up the requests when it is ready
+* If the application has high load, it might send a lot of requests that the logging service might not be able to handle
+* So, if we have a pub-sub (a message queue) in between, the logging service can pick up the requests only if it is ready
 ![](img/pub-sub.png)
 
 ## Pub Sub
@@ -284,7 +290,7 @@ enable the API of the app
 ![](img/pubsub-workflow.png)
 
 ## DataFlow
-* A GCP service to do some edubudi velai such as importing data from one service to another, comporession of files, decompression of files and so on ..
+* A GCP service to do some edubudi velai such as importing data from one service to another, compression of files, decompression of files and so on ..
 ![](img/dataflow.png)
 
 # Other Services
@@ -297,6 +303,7 @@ DataFusion - Visually manage data piplelines (Like Flowchart mayB)
 DataStudio - Visualize data in BigQuery
 Datalab - Provides Jypter Notebooks (IDE) with Data Science libraries
 Looker - BI Tool
+DataStream - Used to replicate and synchronize data
 
 BigQuery - Ad Hoc complex analysis
 BigTable - pre-defined time series data
@@ -316,6 +323,7 @@ Vertex AI - Make MLOps easier
 BigQueryML - Create models by queying BigQuery (OLAP) DB 
 *** Security Services in Security Section ***
 ```
+* In Dataflow, you have to write code.  Either Java or Python, as of this writing.
 > keep in mind Cloud Vision vs AutoML 
 
 ![](img/dataproc.png)
@@ -342,7 +350,7 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 ![](img/security-2.png)
 
 ### Zero Trust Security model
-* In traditional IT security model, the security was implemented only at the network level. Users putside the network were supposed to be authenticated.
+* In traditional IT security model, the security was implemented only at the network level. Users outside the network were supposed to be authenticated.
 * But In ZTSM, every resource should have authentication at the resource-level as well. Even if an attacker gains access to the network, he needs to be authenticated for each resource as well.
 
 > Multi-Region in GCP always means that multiple regions in the same Continent (Asia, US, Europe)
@@ -394,3 +402,30 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 ![](img/database-services.png)
 ![](img/migration-services.png)
 ![](img/other-services.png)
+
+# Notes
+* Cloud Logging is not a place to retain or analyze external logs.
+* **Chronicle** is a cloud service designed for enterprises to privately retain, analyze, and search the massive amounts of security and network telemetry they generate. Chronicle normalizes, indexes, correlates, and analyzes the data to provide instant analysis and context on risky activity.
+* By dividing a large table into smaller partitions, you can improve query performance, and you can control costs by reducing the number of bytes read by a query.
+    * With the on-demand pricing model in BigQuery, you are charged for the number of bytes processed by each query
+* Some products like **Cloud Run** (serverless) are managed within Google Cloud infrastructure, but outside of customer VPCs.
+* AppSheet is a no-code application development tool. It integrates with Google Sheets.
+* Google Recommends to use **Transfer Appliance** when transferring over 60TB of data
+* Cloud SQL supports MySQL, PostgreSQL, **Microsoft SQL Server**
+* In ML, feature is input; label is output. A feature is one column of the data in your input set
+* Managed GCP Services mapped with Open Source Services
+    ```
+    DataFlow = Apache Beam (for data/batch processing)
+    DataFusion = CDAP
+    DataProc = Hadoop/Spark
+    Cloud Composer = Apache Airflow
+    ```
+* **Compliance Report Manager** consists of third-party audits and certifications, documentation, and contract commitments help support your compliance
+* Google's **Data Labeling Service** lets you work with human labelers to generate highly accurate labels for a collection of data that you can use in machine learning models.
+* Cloud Router enables you to dynamically exchange routes between your VPC and on-premises networks by using BGP
+* Using WAAP (Web Application and API Protection) is the right protection plan: Anti-DDoS, anti-bot, WAF, and API protection help you protect against new and existing threats while helping you keep your apps and APIs compliant and continuously available.
+* **IAP** (Identity Aware Proxy) lets you establish a central authorization layer for applications accessed by HTTPS, so you can use an application-level access control model instead of relying on network-level firewalls.
+* **Dataplex** - data fabric for unified data management
+* **Database Migration Service** Available now for MySQL and PostgreSQL, with Oracle
+* **AlloyDB** is a fully managed PostgreSQL-compatible database service
+* VM instances that only have internal IP addresses (no external IP addresses) can use **Private Google Access**. They can reach the external IP addresses of Google APIs and services.
