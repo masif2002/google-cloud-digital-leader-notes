@@ -1,3 +1,28 @@
+# GOOGLE CLOUD DIGITAL LEADER NOTES
+Personalized Notes for the Google Cloud Digital Leader Certification. 
+
+## Table Of Contents
+01. [Introduction](#introduction)
+02. [Google Compute Engine](#gce-google-compute-engine)
+03. [Iaas, Paas, Saas](#iaas-paas-saas)
+04. [GCP Compute Services](#gcp-compute-services)
+05. [Databases](#databases)
+06. [Identity Access Management](#iam)
+07. [Resource Organization](#resource-organization-in-gcp)
+08. [More on Virtual Machines](#vms-contd)
+09. [DevOps](#devops)
+10. [Decoupling with pub-sub](#decoupling-w-pub-sub)
+11. [Other Services](#other-services)
+12. [Architectures in the Cloud](#arcitectures-in-the-cloud)
+13. [Cost Management in GCP](#cost-management-in-gcp)
+14. [Summary](#final-review)
+15. [Practice Test Notes](#notes)
+
+## References
+> https://www.udemy.com/course/google-cloud-digital-leader-certification/  
+> https://github.com/in28minutes/course-material/blob/main/15-google-cloud-digital-leader/downloads.md   
+> https://www.udemy.com/course/google-cloud-certified-cloud-digital-leader-practice-tests/
+
 # Introduction
 
 ### Cloud Advantages
@@ -38,7 +63,7 @@
 ![](img/soleTenant.png)
 ____
 * By default, you'll have to pay for the OS that you are using on top of the GCE's price. 
-* You can also use your license to create VMs if you have one, or use the Pay-as-you-go model that charges you for OS as well on a hourly basis
+* You can also use your license for the OS on the created VMs if you have one, or use the Pay-as-you-go model that charges you for OS as well on a hourly basis
 > Note: There are some free OSes as well
 
 ### Custom Machine Types
@@ -93,8 +118,7 @@ and so on...
 ![](img/app-engine.png)
 ![](img/app-engine-env.png)
 
->  Note: Before using any service you haven't used before, you actually lication first
-enable the API of the app
+>  Note: Before using any service you haven't used before, you actually first enable the API of the app
 ## GKE
 ![](img/gke.png)
 ![](img/autopilot.png)
@@ -135,7 +159,7 @@ enable the API of the app
     * Local SSDs are attached to the VM and have very high throughput.  However, when the VM shuts down, the Local SSD is also shut down.  Since our workload here is fault tolerant, that is not an issue.
 * Persistent Storage = High Globality
 
-## Cloud Storage An object Storage
+## Cloud Storage - An object Storage
 * Name of the bucket must be globally unique 
 ![](img/cloud-storage.png)
 
@@ -144,8 +168,6 @@ enable the API of the app
 * You can modify the storage class at the object level as well
 
 ## Object Lifecycle management
-* Similar to Intelligent Tiering in AWS
-
 ![](img/lifecyle-management.png) 
 
 ## Data Transfer to Cloud
@@ -172,6 +194,7 @@ enable the API of the app
 ![](img/bigquery.png)
 ## NoSQL Databases
 ![](img/nosql-db.png)
+* BigTable can scale globally
 
 ## In-Memory Databases (Cache)
 ![](img/in-memory-db.png)
@@ -194,7 +217,7 @@ enable the API of the app
 * Similarly, you can also have an admin privileges for Service account managing permissions and stuff
 
 # Resource organization in GCP
-##  Hierarichy structure
+##  Hierarchy structure
 ![](img/hierarchy.png)
 
 ## Billing Accounts
@@ -230,7 +253,7 @@ enable the API of the app
 ## Bare Metal
 ![](img/bare-metal.png)
 
-## VmWare Engin
+## VmWare Engine
 ![](img/vmware-engine.png)
 
 ## Migrate for Compute Engine
@@ -255,7 +278,7 @@ enable the API of the app
 
 ## IaC (Infrastructure as Code)
 ![](img/iac.png)
-* Google Cloud Deployment Manager is a GCP service for IaS
+* Google Cloud Deployment Manager is a GCP service for IaC
 
 ## GCP Service for Operations
 ![](img/gcp-ops-services.png)
@@ -288,7 +311,6 @@ enable the API of the app
 * If multiple clients are attached to a same subscription, the messages are split between the clients
 * If clients have seperate subscriptions all the messages are sent to every client
 
-User Identit
 ## DataFlow
 * A GCP service to do some edubudi velai such as importing data from one service to another, compression of files, decompression of files and so on ..
 ![](img/dataflow.png)
@@ -310,7 +332,7 @@ BigTable - pre-defined time series data
 
 ioT Core - Manage ioT devices
 apiGee - Comprehensive API management
-C Endpoint - Basic API management; Complex to set up
+Cloud Endpoint - Basic API management; Complex to set up
 API Gateway - Simpler newer API management
 
 Speech-to-Text API 
@@ -346,7 +368,7 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 
 ## Security
 ![](img/security-1.png)
-* Data Loss Prevention is aka DAP
+* Data Loss Prevention is aka DLP
 ![](img/security-2.png)
 
 ## Support
@@ -425,15 +447,14 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
     ```
 * **Compliance Report Manager** consists of third-party audits and certifications, documentation, and contract commitments help support your compliance
 * Google's **Data Labeling Service** lets you work with human labelers to generate highly accurate labels for a collection of data that you can use in machine learning models.
-* Cloud Router enables you to dynamically exchange routes between your VPC and on-premises networks by using BGP
-* Using WAAP (Web Application and API Protection) is the right protection plan: Anti-DDoS, anti-bot, WAF, and API protection help you protect against new and existing threats while helping you keep your apps and APIs compliant and continuously available.
+* **Cloud Router** enables you to dynamically exchange routes between your VPC and on-premises networks by using BGP
+* Using **WAAP** (Web Application and API Protection) is the right protection plan: Anti-DDoS, anti-bot, WAF, and API protection help you protect against new and existing threats while helping you keep your apps and APIs compliant and continuously available.
 * **IAP** (Identity Aware Proxy) lets you establish a central authorization layer for applications accessed by HTTPS, so you can use an application-level access control model instead of relying on network-level firewalls.
-* **Dataplex** - data fabric for unified data management
+* **Dataplex** - Unified Data management across data lakes, data warehouses, and data marts
 * **Database Migration Service** Available now for MySQL and PostgreSQL, with Oracle
 * **AlloyDB** is a fully managed PostgreSQL-compatible database service
 * VM instances that only have internal IP addresses (no external IP addresses) can use **Private Google Access**. They can reach the external IP addresses of Google APIs and services.
 * Google provides **unified billing** for the open source tools that it has partenered with like MongoDB, Confluent, DataStax ...
-* **Confidential Compute** is the option that allows you to encrypt data in use—while it’s being processed.
 * Leading software vendors provide **virtual desktop solutions** (VDI) on Google Cloud: Citrix, Itopia,
 * When you enable **committed use discount sharing**, all of your current active committed use discounts in all the projects come under the same Cloud Billing account
 * Notebooks is a managed service that offers an integrated and secure JupyterLab environment for data scientists 
@@ -442,13 +463,16 @@ BigQueryML - Create models by queying BigQuery (OLAP) DB
 * Bare Metal machines give you the ability to install any software but Sole-tenant nodes are still virtualized
 * Cloud Trace is used for analyzing latency
 * Titan Security Keys provide the highest level of security more than MFA using Mobile app
-* VPC Network Peering allows internal IP address connectivity across two Virtual Private Cloud (VPC) networks regardless of whether they belong to the same project or the same organization.
-    * Shared VPC is only within an organization - it allows an organization to connect resources from multiple projects to a common Virtual Private Cloud (VPC) network, so that they can communicate with each other securely and efficiently using internal IPs from that network.
+* VPC Network Peering allows internal IP address connectivity **across two Virtual Private Cloud** (VPC) networks regardless of whether they belong to the same project or the same organization.
+    * Shared VPC is only **within an organization** - it allows an organization to connect resources from multiple projects to a common Virtual Private Cloud (VPC) network, so that they can communicate with each other securely and efficiently using internal IPs from that network.
 * Bring your own IP (BYOIP) lets you provision and use your own public IPv4 addresses for Google Cloud resources
-* Cloud Identity Platform allows you to manage identity and credentials for your consumer facing applications. Wheread Cloud Identity is for the enterprise.  It provides an email id with the org domain name, but with no access to Google Workspace tools like Docs, Sheets, Slides, etc.
+* **Cloud Identity Platform** allows you to manage identity and credentials for your consumer facing applications. Wheread **Cloud Identity** is for the enterprise.  It provides an email id with the org domain name, but with no access to Google Workspace tools like Docs, Sheets, Slides, etc.
 * BigQuery also supports streaming data and its possible to do real time analytics on it.
 * You can associated a Google Billing Account with a GCP organization or GCP Projects. There is no concept of associating a billing account with a folder
 * Data Studio is a free tool and integrates well with BigQuery. Both creating and viewing reports are free.
 * Migrate for Compute Engine’s advanced replication migration technology copies instance data to Google Cloud in the background with no interruptions to the source workload that’s running.
 * Operations Suite provides integrated monitoring, logging, and trace managed services for applications and systems running on Google Cloud and beyond.
 * Lending DocAI is a pre-packaged AI solution that speeds "up the mortgage workflow processes to easily process loans and automate document data capture, while ensuring the accuracy and breadth of different documents (e.g., tax statements and asset documents)."
+* Cloud Scheduler is a fully managed enterprise-grade cron job scheduler. I
+* Data is encrypted by Google Cloud at rest and in transit on Google Cloud.  However, encryption at time of processing is optional.
+    * **Confidential Compute** is the option that allows you to encrypt data in use—while it’s being processed.
